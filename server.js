@@ -9,7 +9,13 @@ import {UpdateRoute} from './routes/UpdateRoute.js';
 import {DeleteRoute} from './routes/DeleteRoute.js'
 dotenv.config();
 const app = express();
-app.use(cors()); 
+app.use(cors(
+{
+    origin: ["https://ankush-io-tech-frontend.vercel.app/https://ankush-io-tech-frontend.vercel.app/"],
+    methods: ["POST", "GET", "DELETE"],
+    credentials: true
+}
+)); 
 app.use(morgan('dev'));
 app.use(express.json());
 app.use('/api/v1/create', CreateRoute);//endpoint for creating
