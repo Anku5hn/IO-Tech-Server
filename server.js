@@ -11,7 +11,7 @@ dotenv.config();
 const app = express();
 app.use(cors(
 {
-    origin: ["https://ankush-io-tech-frontend.vercel.app/https://ankush-io-tech-frontend.vercel.app/"],
+    origin: ["https://ankush-io-tech-frontend.vercel.app/"],
     methods: ["POST", "GET", "DELETE"],
     credentials: true
 }
